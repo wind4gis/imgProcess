@@ -1,2 +1,6 @@
+node_modules/
 img/
 out/
+.vscode/
+
+yarn.lock
