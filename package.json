@@ -1,0 +1,18 @@
+{
+  "name": "imgprocess",
+  "version": "1.0.0",
+  "description": "yarn add pm2 -g\r npm link pm2",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.3.1",
+    "tinify": "^1.6.0-beta.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
