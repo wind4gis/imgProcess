@@ -35,7 +35,9 @@ PM2_HOME=C:\Users\.pm2(路径默认在当前用户下的.pm2文件夹)
 4. 执行`npm install`
 
 ### 以管理员权限打开新的命令行窗口,执行以下命令来安装服务
-pm2-service-install
+执行`pm2-service-install`，提示`Perform environment setup ?`，选`n`，后台会自动安装PM2服务并启动，服务名称为PM2。安装成功后会提示`PM2 service installed and started`
+
+如果选择n之后程序卡住没有提示安装成功，需要执行上一步操作`手动更新pm2-windows-service`
 
 ## 运行程序
 1. 执行`pm2 start watch.js`，通过pm2启动脚本
