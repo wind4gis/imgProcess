@@ -7,6 +7,9 @@
 # 运行需知
 项目采用的是tinypng的api进行图片自动压缩，由于免费版api每个月是有对应的压缩次数，所以需要手动登陆[tinypng网站申请API Key](https://tinypng.com/developers)，将config.js的key值修改为申请后的key值
 
+# 初始化
+执行`yarn`或者`npm i`进行初始化
+
 # 手动运行
 执行`nodemon watch.js`命令手动运行
 
