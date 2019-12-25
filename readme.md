@@ -38,5 +38,6 @@ PM2_HOME=C:\Users\.pm2(路径默认在当前用户下的.pm2文件夹)
 pm2-service-install
 
 ## 运行程序
-pm2 start watch.js
-pm2 save
+1. 执行`pm2 start watch.js`，通过pm2启动脚本
+
+2. 执行`pm2 save`，配置开机自启动
