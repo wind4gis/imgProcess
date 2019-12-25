@@ -56,4 +56,23 @@ async function getFileName(filePath) {
   return [path.join(originalPath, hashBaseName), path.join(compressionPath, hashBaseName)]
 }
 
-module.exports = getFileName
+function initDir() {
+  [srcPath, outOriginalPath, outCompressionPath].forEach(dirPath => {
+    initRecyleDir(dirPath)
+  })
+}
+
+function initRecyleDir(dirPath) {
+  const parentPath = path.dirname(dirPath)
+  if (!fs.existsSync(parentPath)) {
+    initRecyleDir(parentPath)
+  }
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath)
+  }
+}
+
+module.exports = {
+  getFileName,
+  initDir,
+}
