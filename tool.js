@@ -55,13 +55,18 @@ async function getFileName(filePath) {
   const hashBaseName = await getHashBaseFileName(filePath)
   return [path.join(originalPath, hashBaseName), path.join(compressionPath, hashBaseName)]
 }
-
+/**
+ * 初始化文件目录
+ */
 function initDir() {
   [srcPath, outOriginalPath, outCompressionPath].forEach(dirPath => {
     initRecyleDir(dirPath)
   })
 }
-
+/**
+ * 递归创建对应的文件夹路径
+ * @param {*} dirPath 文件夹路径
+ */
 function initRecyleDir(dirPath) {
   const parentPath = path.dirname(dirPath)
   if (!fs.existsSync(parentPath)) {
