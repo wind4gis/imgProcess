@@ -1,5 +1,5 @@
 module.exports = {
-  key: '',
+  key: 'TQ4kvr9860NRWNKmnwd3KPCSWtQyQrfy',
   entry: './img',
   output: './out',
   pictureType: ['gif', 'jpeg', 'jpg', 'png']
