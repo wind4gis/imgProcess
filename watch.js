@@ -26,6 +26,9 @@ chokidar.watch("./img").on("add", async (file) => {
       error("文件已存在");
       return;
     }
+    if ("png" !== lowcaseName) {
+      return
+    }
     execFile(
       pngquant,
       [
@@ -56,9 +59,10 @@ chokidar.watch("./img").on("add", async (file) => {
           return;
         }
         if (!err) {
-          fs.unlink(filePath, err => {
-            err && error(err)
-          })
+          console.log("已处理", filePath)
+        //   fs.unlink(filePath, err => {
+        //     err && error(err)
+        //   })
         }
         err && error(err);
       }
