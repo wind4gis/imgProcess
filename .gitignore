@@ -4,3 +4,4 @@ out/
 .vscode/
 config
 yarn.lock
+tmp/*
