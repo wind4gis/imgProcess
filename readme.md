@@ -11,7 +11,7 @@
 执行`yarn`或者`npm i`进行初始化
 
 # 手动运行
-执行`nodemon watch.js`命令手动运行
+执行`nodemon index.js`命令手动运行
 
 
 # 配置开机自启动
@@ -40,6 +40,6 @@ PM2_HOME=C:\Users\.pm2(路径默认在当前用户下的.pm2文件夹)
 如果选择n之后程序卡住没有提示安装成功，需要执行上一步操作`手动更新pm2-windows-service`
 
 ## 运行程序
-1. 执行`pm2 start watch.js`，通过pm2启动脚本
+1. 执行`pm2 start index.js`，通过pm2启动脚本
 
 2. 执行`pm2 save`，配置开机自启动
