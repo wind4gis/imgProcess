@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-05-20 11:29:38
  * @LastEditors: Huang canfeng
- * @LastEditTime: 2020-06-30 15:38:12
+ * @LastEditTime: 2020-08-11 18:59:20
  * @Description:
  */
 
@@ -61,30 +61,30 @@ process.tapAsync("optiPng", ({ compressionPath, filePath, lowcaseExt }, callback
 	});
 });
 
-// chokidar.watch("./img").on("add", (file) => {
-// 	console.log(file, flag, "开始接收");
-// 	if (flag) {
-// 		buffer.push(file);
-// 	} else {
-// 		write(file, clearBuffer);
-// 	}
-// });
-
-fs.readdir("./img", (err, files) => {
-	console.log(files);
-	files.forEach((file) => {
-		const curFile = path.join("./img", file)
-		fs.stat(curFile, (err, data) => {
-			if (data.isFile) {
-				if (flag) {
-					buffer.push(curFile);
-				} else {
-					write(curFile, clearBuffer);
-				}
-			}
-		});
-	});
+chokidar.watch("./img").on("add", (file) => {
+	console.log(file, flag, "开始接收");
+	if (flag) {
+		buffer.push(file);
+	} else {
+		write(file, clearBuffer);
+	}
 });
+
+// fs.readdir("./img", (err, files) => {
+// 	console.log(files);
+// 	files.forEach((file) => {
+// 		const curFile = path.join("./img", file)
+// 		fs.stat(curFile, (err, data) => {
+// 			if (data.isFile) {
+// 				if (flag) {
+// 					buffer.push(curFile);
+// 				} else {
+// 					write(curFile, clearBuffer);
+// 				}
+// 			}
+// 		});
+// 	});
+// });
 
 const preProcess = async (file) => {
 	const extName = (path.extname(file) || "").replace(/\./g, "");
